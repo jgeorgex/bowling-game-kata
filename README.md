@@ -23,26 +23,26 @@ Create Game class
 create void roll(int) method
 create int score() method
 
-Input Output
-void roll(0) 0
-void roll(1) 1
+Input Output<br>
+void roll(0) 0 <br>
+void roll(1) 1 <br>
 
-void roll(0) x20  
-int score() 0
+void roll(0) x20 <br>
+int score() 0 <br>
 
-void roll(1) x20  
-int score() 20
+void roll(1) x20 <br>
+int score() 20 <br>
 
-void roll(4) x20  
-int score() 80
+void roll(4) x20 <br>
+int score() 80 <br>
 
-void roll(10)
-void roll(1) x18
-int score() 30 (NB bonus score from strike is 2)
+void roll(10) <br>
+void roll(1) x18 <br>
+int score() 30 (NB bonus score from strike is 2) <br>
 
-void roll(5)
-void roll(5)
-void roll(1) x18
-int score() 30 (NB bonus score from strike is 2)
+void roll(5) <br>
+void roll(5) <br>
+void roll(1) x18 <br>
+int score() 30 (NB bonus score from strike is 2) <br>
 
 TBC with spares and strikes at other points in the game. Then concurrent strikes and spares. Then current strikes and spares leading into the final frame. Then illegal moves/edge cases.
