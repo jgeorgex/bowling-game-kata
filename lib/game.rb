@@ -2,7 +2,18 @@
 
 # game class
 class Game
-  def void_roll(int)
-    int
+
+  def initialize
+    @game_score = []
   end
+
+  def roll(int)
+   @game_score << int
+   int
+  end
+
+  def current_score
+   @game_score.sum
+  end
+
 end
