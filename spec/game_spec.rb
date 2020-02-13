@@ -89,5 +89,14 @@ describe 'Game' do
       16.times { game.roll(1) }
         expect(game.current_score).to eq(44)
     end
+    it 'returns 28 when there is a spare followed by a 1,0, then all ones' do
+      game = Game.new
+      game.roll(1)
+      game.roll(9)
+      game.roll(9)
+      game.roll(0)
+      16.times { game.roll(4) }
+        expect(game.current_score).to eq(92)
+    end
   end
 end
