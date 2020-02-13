@@ -114,5 +114,15 @@ describe 'Game' do
       game.roll(1)
         expect(game.current_score).to eq(29)
     end
+    it 'returns 30 when player rolls 1,9,9,1,0,1' do
+      game = Game.new
+      game.roll(1)
+      game.roll(9)
+      game.roll(9)
+      game.roll(1)
+      game.roll(0)
+      game.roll(1)
+        expect(game.current_score).to eq(30)
+    end
   end
 end
