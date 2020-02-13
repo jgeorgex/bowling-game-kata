@@ -53,13 +53,23 @@ describe 'Game' do
       game.roll(1)
         expect(game.current_score).to eq(11)
     end
-    it 'returns 10 when there is a spare followed by a 1 and a zero' do
+    it 'returns 12 when there is a spare followed by a 1 and a zero' do
       game = Game.new
       game.roll(1)
       game.roll(9)
       game.roll(1)
       game.roll(0)
         expect(game.current_score).to eq(12)
+    end  
+    it 'returns 14 when there is a spare followed by a 1,0,1,1' do
+      game = Game.new
+      game.roll(1)
+      game.roll(9)
+      game.roll(1)
+      game.roll(0)
+      game.roll(1)
+      game.roll(1)
+        expect(game.current_score).to eq(14)
     end  
   end
 end
