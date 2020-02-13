@@ -3,7 +3,6 @@
 require 'game'
 
 describe 'Game' do
-  
   describe '#roll(int)' do
     it 'returns 0 when input is 0' do
       game = Game.new
@@ -80,7 +79,7 @@ describe 'Game' do
       16.times { game.roll(1) }
         expect(game.current_score).to eq(28)
     end
-    it 'returns 28 when there is a spare followed by a 1,0, then all ones' do
+    it 'returns 28 when there is a spare followed by a 9,0, then all ones' do
       game = Game.new
       game.roll(1)
       game.roll(9)
@@ -89,7 +88,7 @@ describe 'Game' do
       16.times { game.roll(1) }
         expect(game.current_score).to eq(44)
     end
-    it 'returns 28 when there is a spare followed by a 1,0, then all ones' do
+    it 'returns 92 when there is a spare followed by a 9,0, then all fours' do
       game = Game.new
       game.roll(1)
       game.roll(9)
@@ -97,6 +96,23 @@ describe 'Game' do
       game.roll(0)
       16.times { game.roll(4) }
         expect(game.current_score).to eq(92)
+    end
+    it 'returns 92 when there is a spare followed by a 9,0, then all fours' do
+      game = Game.new
+      game.roll(1)
+      game.roll(9)
+      game.roll(9)
+      game.roll(0)
+      16.times { game.roll(4) }
+        expect(game.current_score).to eq(92)
+    end
+    it 'returns 29 when there is a spare followed by a 9,1' do
+      game = Game.new
+      game.roll(1)
+      game.roll(9)
+      game.roll(9)
+      game.roll(1)
+        expect(game.current_score).to eq(29)
     end
   end
 end
